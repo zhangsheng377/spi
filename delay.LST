@@ -1,0 +1,44 @@
+C51 COMPILER V7.06   DELAY                                                                 06/04/2013 19:32:19 PAGE 1   
+
+
+C51 COMPILER V7.06, COMPILATION OF MODULE DELAY
+OBJECT MODULE PLACED IN delay.OBJ
+COMPILER INVOKED BY: D:\Program Files\keil\C51\BIN\C51.EXE delay.c BROWSE DEBUG OBJECTEXTEND
+
+stmt level    source
+
+   1          /*****************************************************************************
+   2          * 文件名：delay.c
+   3          * 说  明：延时函数
+   4          *****************************************************************************/
+   5          #include "main.h"
+   6          
+   7          /******************************************************
+   8          * 函数：延时timer毫秒（单片机：AT89C51、晶振频率：12MHz）
+   9          * 参数：timer要延时的毫秒数值
+  10          *******************************************************/
+  11          void delay_ms(uint timer)
+  12          {
+  13   1          uchar j = 0;
+  14   1          while(timer--)
+  15   1          {
+  16   2              for(j = 124; j>0; j--)
+  17   2              {
+  18   3                  ;
+  19   3              }
+  20   2          }
+  21   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     22    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
